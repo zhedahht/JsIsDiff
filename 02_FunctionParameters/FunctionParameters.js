@@ -48,7 +48,7 @@ $(document).ready(function () {
         
         console.log(power(2, 3)); // 8
     })();
-    
+    /*
     (function() {
         function power(base, exponent) {
             if (exponent == 1) {
@@ -60,17 +60,14 @@ $(document).ready(function () {
         
         var realPower = power;
         
-        power = function(name) {
-            console.log("Grant power to", name);
-        }
+        power = "More power, more powerful";
         
         console.log(realPower(2, 3));
         
-        // Output:
-        // Grant power to 2
-        // NaN
+        // Result:
+        // TypeError: string is not a function
     })();
-    
+    */
     (function() {
         function power(base, exponent) {
             if (exponent == 1) {
@@ -82,9 +79,7 @@ $(document).ready(function () {
         
         var realPower = power;
         
-        power = function(name) {
-            console.log("Grant power to", name);
-        }
+        power = "More power, more powerful";
         
         console.log(realPower(2, 3)); // 8
     })();
