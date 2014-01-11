@@ -31,7 +31,6 @@ $(document).ready(function () {
         }
         
         console.log(add(1, 2, 3)); // 6
-        console.log(add(1, 2, 3, 4)) // 10
     })();
     
     (function() {
@@ -55,18 +54,6 @@ $(document).ready(function () {
         })(10);
         
         console.log(threeToPowerOfTen); // 59049 
-    })();
-    
-    (function() {
-        function power(base, exponent) {
-            if (exponent == 1) {
-                return base
-            }
-        
-            return base * power(base, exponent - 1);
-        }
-        
-        console.log(power(2, 3)); // 8
     })();
     /*
     (function() {
