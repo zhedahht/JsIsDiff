@@ -26,7 +26,7 @@ $(document).ready(function () {
         
         module.count = 5;
         module.increase();
-        module.print(); // output: 6
+        module.print(); // 6
     })();
 
     (function() {
@@ -49,7 +49,7 @@ $(document).ready(function () {
             
         module.count = 5; 
         module.increase();
-        module.print(); // output: 1
+        module.print(); // 1
     })();
 });
 
