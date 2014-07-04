@@ -83,57 +83,5 @@ $(document).ready(function () {
         console.log(fibonacci(10)); // 55
         console.log(fibonacci(50)); // 12586269025
     })();
-
-    // Constructor properties as static variables
-    (function() {
-        function Account(name) {  
-            this.name = name;  
-            this.id = Account.nextId++;  
-        }  
-          
-        Account.nextId = 100;  
-          
-        Account.prototype.toString = function() {  
-            return "Name is: " + this.name + "; id is: " + this.id + ".";  
-        }  
-          
-        var accountA = new Account("Harry");  
-        var accountB = new Account("Peter");  
-          
-        console.log(accountA.toString()); // Name is: Harry; id is: 100. 
-        console.log(accountB.toString()); // Name is: Peter; id is: 101.
-    })();
-
-    // Constructor properties as static methods
-    (function() {
-        function Complex(real, imaginary) {
-            this.r = real; 
-            this.i = imaginary; 
-        } 
-
-        Complex.prototype.add = function(that) {
-            return new Complex(this.r + that.r, this.i + that.i);
-        };
-
-        Complex.prototype.toString = function() {
-            return "{" + this.r + ", " + this.i + "}";
-        };
-
-        Complex.parse = function(s) {
-            try {
-                var m = Complex._format.exec(s); 
-                return new Complex(parseFloat(m[1]), parseFloat(m[2]));
-            } 
-            catch (x) { 
-                throw new TypeError("Can't parse \"" + s + "\" as a complex number.");
-            }
-        };
-        Complex._format = /^\{([^,]+),([^}]+)\}$/;
-
-        var complex1 = Complex.parse("{1, 2}");
-        var complex2 = Complex.parse("{5, 3}");
-        var result = complex1.add(complex2);
-        console.log(result.toString()); // {6, 5}
-    })();
 });
 
