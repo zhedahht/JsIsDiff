@@ -6,6 +6,7 @@ $(document).ready(function () {
             return a + b;
         };
         
+        console.log(typeof(add)); // function
         console.log(add(1, 2)); // 3
     })();
     
@@ -24,7 +25,7 @@ $(document).ready(function () {
 
     // callback functions
     (function() {
-        var sum = function(nums) {
+        function sum(nums) {
             var total = 0;
             nums.forEach(function(num) {
                 total += num;
@@ -39,7 +40,7 @@ $(document).ready(function () {
 
     // functions as return values
     (function() {
-        var doubleFunc = function(a) {
+        function doubleFunc(a) {
             return function() {
                 return a + a;
             }
