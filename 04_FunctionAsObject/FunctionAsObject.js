@@ -12,15 +12,20 @@ $(document).ready(function () {
     
     // functions as parameters
     (function() {
-        var calculate = function(operator, a, b) {
+        function calculate(operator, a, b) {
             return operator(a, b);
         };
         
-        var add = function(a, b) {
+        function add(a, b) {
             return a + b;
         };
         
+        function multiply(a, b) {
+            return a * b;
+        };
+        
         console.log(calculate(add, 2, 5)); // 7
+        console.log(calculate(multiply, 2, 5)); // 10
     })();
 
     // callback functions
@@ -40,23 +45,23 @@ $(document).ready(function () {
 
     // functions as return values
     (function() {
-        function doubleFunc(a) {
+        function addFunc(a, b) {
             return function() {
-                return a + a;
+                return a + b;
             }
         };
         
-        var func = doubleFunc(3);
+        var func = addFunc(3, 5);
         console.log(typeof(func)) // function
-        console.log(func()); // 6
+        console.log(func()); // 8
     })();
 
     // functions have their own properties
     (function() {
-        test.counter = 0;
+        test.count = 0;
         function test() {
-            test.counter++;
-            console.log(test.counter);
+            test.count++;
+            console.log(test.count);
         }
 
         test(); // 1
