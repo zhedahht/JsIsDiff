@@ -11,20 +11,26 @@ $(document).ready(function () {
     
     // " and '
     (function() {
-        var str1 = "I can't wait to learn Javascript.";
-        var str2 = 'He said: "Javascript is so good".';
+        var str1 = "I can't wait to learn JavaScript.";
+        var str2 = 'He said: "JavaScript is so good".';
 
-        console.log(str1); // I can't wait to learn Javascript.
-        console.log(str2); // He said: "Javascript is so good".
+        console.log(str1); // I can't wait to learn JavaScript.
+        console.log(str2); // He said: "JavaScript is so good".
+        
+        var str3 = 'I can\'t wait to learn JavaScript.';
+        var str4 = "He said: \"JavaScript is so good\".";
+        
+        console.log(str1 == str3); // true
+        console.log(str2 == str4); // true
     })();
 
     // Strings in multiple lines
     (function() {
         var str = "<div> \
-        Learning Javascript \
+        Learning JavaScript \
         </div>";
 
-        console.log(str); // <div> Learning Javascript </div>
+        console.log(str); // <div> Learning JavaScript </div>
     })();
 
     // Immutable strings
@@ -32,7 +38,7 @@ $(document).ready(function () {
         var str = "hello";
         console.log(str[1]); // e
         
-        str[3] = 'a';
+        str[1] = 'a';
         console.log(str[1]); // e
     })();
 
