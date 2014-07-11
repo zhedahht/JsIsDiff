@@ -89,20 +89,19 @@ $(document).ready(function () {
 
     // Arrays as stacks
     (function() {
-        var array = [1, 2];
+        var stack = [1, 2];
 
-        array.push(3); // [1, 2, 3] 
-        console.log(array);
+        stack.push(3); // [1, 2, 3] 
+        console.log(stack);
 
-        array.push(4); // [1, 2, 3, 4]
-        console.log(array);
+        stack.push(4); // [1, 2, 3, 4]
+        console.log(stack);
 
-        console.log(array.pop()); // 4
-        console.log(array.pop()); // 3
-        console.log(array); // [1, 2] 
+        console.log(stack.pop()); // 4
+        console.log(stack.pop()); // 3
+        console.log(stack); // [1, 2] 
     })();
 
-    // Arrays as queues
     (function() {
         var array = [1, 2];
 
@@ -117,6 +116,21 @@ $(document).ready(function () {
         console.log(array); // [1, 2]
     })();
 
+    // Arrays as queues
+    (function() {
+        var queue = [1, 2];
+
+        queue.push(3); // [1, 2, 3] 
+        console.log(queue);
+
+        queue.push(4); // [1, 2, 3, 4]
+        console.log(queue);
+
+        console.log(queue.shift()); // 1
+        console.log(queue.shift()); // 2
+        console.log(queue); // [3, 4] 
+    })();
+    
     // Delete elements in an array
     (function() {
         var array1 = [1, 2, 3, 4, 5, 6, 7];
