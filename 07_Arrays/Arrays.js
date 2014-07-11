@@ -77,17 +77,14 @@ $(document).ready(function () {
 
     // Sort an array in numeric order
     (function() {
-        var array = [1, 2];
+        var array = [4, 20, 10, 7];
 
-        array.push(3); // [1, 2, 3] 
-        console.log(array);
+        function compare(a, b) {
+            return a - b;
+        }
 
-        array.push(4); // [1, 2, 3, 4]
-        console.log(array);
-
-        console.log(array.pop()); // 4
-        console.log(array.pop()); // 3
-        console.log(array); // [1, 2] 
+        array.sort(compare);
+        console.log(array); // 4,7, 10, 20
     })();
 
     // Arrays as stacks
