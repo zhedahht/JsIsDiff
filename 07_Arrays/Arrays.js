@@ -21,6 +21,7 @@ $(document).ready(function () {
     (function() {
         var array = [0, 1];
         array[4] = 4;
+        array.name = "linear increasing";
 
         console.log("length:", array.length); // length: 5
         for(var index = 0; index < array.length; ++index) {
@@ -37,6 +38,16 @@ $(document).ready(function () {
         for(index in array) {
             console.log(index + ":", array[index]);
         }
+        
+        // Output:
+        // 0: 0
+        // 1: 1
+        // 4: 4
+        // name: linear increasing
+        
+        array.forEach(function(value, index) {
+            console.log(index + ":", value);
+        });
         
         // Output:
         // 0: 0
