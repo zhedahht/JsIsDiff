@@ -14,13 +14,16 @@ $(document).ready(function () {
     (function() {
         console.log("\nstring");
         
-        console.log("3" == 3);      // true  
+        console.log("3" == 3);          // true  
         
-        console.log("0" == false);  // true
-        console.log("" == false);   // true
-        console.log("1" == true);   // true
-        console.log("2" == true);   // false
-        console.log("2" == false);  // false
+        console.log("0" == false);      // true
+        console.log("" == false);       // true
+        console.log("1" == true);       // true
+        console.log("2" == true);       // false
+        console.log("2" == false);      // false
+        
+        console.log("true" == true);    // false
+        console.log("false" == false);  // false
     })();
 
     (function() {
@@ -65,12 +68,8 @@ $(document).ready(function () {
             }
         }
         
-        valueFunction("undefined", undefined);
-        valueFunction("null", null);
-
-        // Output:
-        // undefined is false
-        // null is false
+        valueFunction("undefined", undefined); // undefined is false
+        valueFunction("null", null);           // null is false
     })();
 
     (function() {
@@ -95,9 +94,13 @@ $(document).ready(function () {
         var a = [1, 2, 3];
         var b = [1, 2, 3];
         console.log(a == b); // false
+        
+        var c = a;
+        console.log(a == c); // true;
     })();
 
     (function() {
+        console.log("\n no transitivity");
         console.log("0" == 0);     // true
         console.log(0 == "");      // true
         console.log("0" == "");    // false
