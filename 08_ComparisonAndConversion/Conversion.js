@@ -118,17 +118,5 @@ $(document).ready(function () {
 
         console.log(null === undefined); // false
     })();
-
-    (function() {
-    })();
-    
-    (function() {
-    })();
-
-    (function() {
-    })();
-
-    (function() {
-    })();
 });
 
