@@ -14,9 +14,31 @@ $(document).ready(function () {
     (function() {
         console.log("\nstring");
         
-        console.log("3" == 3);     // true  
-        console.log("0" == false); // true
-        console.log("" == false);  // true
+        console.log("3" == 3);      // true  
+        
+        console.log("0" == false);  // true
+        console.log("" == false);   // true
+        console.log("1" == true);   // true
+        console.log("2" == true);   // false
+        console.log("2" == false);  // false
+    })();
+
+    (function() {
+        console.log("\nstring in if");
+        
+        var valueFunction = function(name, str) {
+            if(str) {
+                console.log(name, "is true");
+            }
+            else {
+                console.log(name, "is false");
+            }
+        }
+        
+        valueFunction("Empty string", "");  // Empty string is false
+        valueFunction("0", "0");            // 0 is true
+        valueFunction("1", "1");            // 1 is true
+        valueFunction("2", "2");            // 2 is true
     })();
 
     (function() {
